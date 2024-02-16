@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenntarthatósági témájú képek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br>
+    <div id="főrész"><h1 id="h1s">Fenntarthatósági témájú képek</h1>
+            <p>
+                <a href="index.html" class="linkszin">Főoldal</a> <br>
+                <a href="celok.html" class="linkszin">Fenntarthatósági célok</a> <br>
+                <a href="kepek.html" class="linkszin">Fenntarthatósági témájú képek</a> <br>
+                <a href="minden.html" class="linkszin">Fenntartható intézkedések és életmód</a> <br>
+                <a href="forrasok.html" class="linkszin">Források</a>
+            </p>
+    
+    </div>
+    <div class="gallery">
+        <div class="image"><img src="kep1.png" alt="Kép 1" onclick="openModal('kep1.png', 'Kép 1')"></div>
+        <div class="image"><img src="kep2.jpg" alt="Kép 2" onclick="openModal('kep2.jpg', 'Kép 2')"></div>
+        <div class="image"><img src="kep3.jpg" alt="Kép 3" onclick="openModal('kep3.jpg', 'Kép 3')"></div>
+        <div class="image"><img src="kep4.jpg" alt="Kép 4" onclick="openModal('kep4.jpg', 'Kép 4')"></div>
+        <div class="image"><img src="kep5.jpg" alt="Kép 5" onclick="openModal('kep5.jpg', 'Kép 5')"></div>
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        function openModal(imageSrc, caption) {
+            var modal = document.getElementById('myModal');
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+            modalImg.alt = caption;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = "none";
+        }
+    </script>
+    <footer>
+        A weboldalt készítette : Engi Andrea
+    </footer>
+</body>
+</html>
